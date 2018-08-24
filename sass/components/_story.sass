@@ -8,6 +8,12 @@
   padding-left: 9rem
   font-size: $default-font-size
   transform: skewX(-12deg)
+  +respond(tab-port)
+    width: 100%
+    padding: 4rem
+    padding-left: 7rem
+  +respond(phone)
+    transform: skewX(0)
 
   &__shape
     position: relative
@@ -17,6 +23,8 @@
     shape-outside: circle(50% at 50% 50%)
     clip-path: circle(50% at 50% 50%)
     transform: translateX(-3rem) skewX(12deg)
+    +respond(phone)
+      transform: translateX(-3rem) skewX(0)
 
   &__image
     height: 100%
@@ -26,6 +34,8 @@
 
   &__text
     transform: skewX(12deg)
+    +respond(phone)
+      transform: skewX(0)
 
   &__caption
     position: absolute
